@@ -1,0 +1,55 @@
+2026-08-20 22:24:21.445 | WARNING  | chatchat.server.utils:detect_xf_models:105 - auto_detect_model needs xinference-client installed. Please try "pip install xinference-client". 
+2026-08-20 22:24:21.445 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:24:21.446 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:24:21.517 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:24:21.522 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:24:21.526 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:24:21.529 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:24:21.540 | SUCCESS  | chatchat.cli:init:47 - 开始初始化项目数据目录：F:\my\workSpaces\KnowledgeChat
+2026-08-20 22:24:21.544 | SUCCESS  | chatchat.cli:init:49 - 创建所有数据目录：成功。
+2026-08-20 22:24:21.577 | SUCCESS  | chatchat.cli:init:52 - 复制 samples 知识库文件：成功。
+2026-08-20 22:24:21.656 | SUCCESS  | chatchat.cli:init:54 - 初始化知识库数据库：成功。
+2026-08-20 22:24:22.337 | SUCCESS  | chatchat.cli:init:66 - 生成默认配置文件：成功。
+2026-08-20 22:24:22.337 | SUCCESS  | chatchat.cli:init:67 - 请先检查确认 model_settings.yaml 里模型平台、LLM模型和Embed模型信息已经正确
+2026-08-20 22:24:22.337 | SUCCESS  | chatchat.cli:init:76 - 执行 chatchat kb -r 初始化知识库，然后 chatchat start -a 启动服务。
+2026-08-20 22:33:05.245 | WARNING  | chatchat.server.utils:detect_xf_models:105 - auto_detect_model needs xinference-client installed. Please try "pip install xinference-client". 
+2026-08-20 22:33:05.246 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:05.248 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:05.307 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:05.335 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:05.362 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:05.390 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:05.456 | SUCCESS  | chatchat.cli:init:47 - 开始初始化项目数据目录：F:\my\workSpaces\KnowledgeChat
+2026-08-20 22:33:05.459 | SUCCESS  | chatchat.cli:init:49 - 创建所有数据目录：成功。
+2026-08-20 22:33:05.480 | SUCCESS  | chatchat.cli:init:52 - 复制 samples 知识库文件：成功。
+2026-08-20 22:33:05.486 | SUCCESS  | chatchat.cli:init:54 - 初始化知识库数据库：成功。
+2026-08-20 22:33:05.997 | SUCCESS  | chatchat.cli:init:66 - 生成默认配置文件：成功。
+2026-08-20 22:33:05.998 | SUCCESS  | chatchat.cli:init:67 - 请先检查确认 model_settings.yaml 里模型平台、LLM模型和Embed模型信息已经正确
+2026-08-20 22:33:05.999 | SUCCESS  | chatchat.cli:init:76 - 执行 chatchat kb -r 初始化知识库，然后 chatchat start -a 启动服务。
+2026-08-20 22:33:24.005 | WARNING  | chatchat.server.utils:detect_xf_models:105 - auto_detect_model needs xinference-client installed. Please try "pip install xinference-client". 
+2026-08-20 22:33:24.006 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:24.008 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:24.068 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:24.098 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:24.128 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:24.158 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:24.496 | INFO     | chatchat.startup:start_main_server:256 - 正在启动服务：
+2026-08-20 22:33:24.500 | INFO     | chatchat.startup:start_main_server:257 - 如需查看 llm_api 日志，请前往 F:\my\workSpaces\KnowledgeChat\data\logs
+2026-08-20 22:33:29.493 | WARNING  | chatchat.server.utils:detect_xf_models:105 - auto_detect_model needs xinference-client installed. Please try "pip install xinference-client". 
+2026-08-20 22:33:29.494 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:29.496 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:29.524 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:29.765 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:29.794 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:29.828 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:29.829 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:29.830 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:29.831 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:29.862 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:30.175 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:30.387 | WARNING  | chatchat.server.utils:get_default_llm:206 - default llm model glm4-chat is not found in available llms, using qwen:7b instead
+2026-08-20 22:33:30.473 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:30.505 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:30.543 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:30.584 | WARNING  | chatchat.server.utils:get_default_embedding:216 - default embedding model bge-m3 is not found in available embeddings, using quentinz/bge-large-zh-v1.5 instead
+2026-08-20 22:33:30.892 | INFO     | chatchat.startup:run_api_server:54 - Api MODEL_PLATFORMS: [PlatformConfig(platform_name='xinference', platform_type='xinference', api_base_url='http://127.0.0.1:9997/v1', api_key='EMPTY', api_proxy='', api_concurrencies=5, auto_detect_model=True, llm_models=[], embed_models=[], text2image_models=[], image2text_models=[], rerank_models=[], speech2text_models=[], text2speech_models=[]), PlatformConfig(platform_name='ollama', platform_type='ollama', api_base_url='http://127.0.0.1:11434/v1', api_key='EMPTY', api_proxy='', api_concurrencies=5, auto_detect_model=False, llm_models=['qwen:7b', 'qwen2:7b'], embed_models=['quentinz/bge-large-zh-v1.5'], text2image_models=[], image2text_models=[], rerank_models=[], speech2text_models=[], text2speech_models=[]), PlatformConfig(platform_name='oneapi', platform_type='oneapi', api_base_url='http://127.0.0.1:3000/v1', api_key='sk-', api_proxy='', api_concurrencies=5, auto_detect_model=False, llm_models=['chatglm_pro', 'chatglm_turbo', 'chatglm_std', 'chatglm_lite', 'qwen-turbo', 'qwen-plus', 'qwen-max', 'qwen-max-longcontext', 'ERNIE-Bot', 'ERNIE-Bot-turbo', 'ERNIE-Bot-4', 'SparkDesk'], embed_models=['text-embedding-v1', 'Embedding-V1'], text2image_models=[], image2text_models=[], rerank_models=[], speech2text_models=[], text2speech_models=[]), PlatformConfig(platform_name='openai', platform_type='openai', api_base_url='https://api.openai.com/v1', api_key='sk-proj-', api_proxy='', api_concurrencies=5, auto_detect_model=False, llm_models=['gpt-4o', 'gpt-3.5-turbo'], embed_models=['text-embedding-3-small', 'text-embedding-3-large'], text2image_models=[], image2text_models=[], rerank_models=[], speech2text_models=[], text2speech_models=[])]
