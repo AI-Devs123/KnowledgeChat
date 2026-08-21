@@ -1,10 +1,76 @@
 # Prompt 模板.除 Agent 模板使用 f-string 外，其它均使用 jinja2 格式
 
 
-# 意图识别用模板
+# ========================================
+# 意图识别模板 - 二级路由架构
+# ========================================
+
+# 【一级路由】总控意图识别 - 粗粒度分类
 preprocess_model:
-  default: "你只要回复0 和 1 ，代表不需要使用工具。以下几种问题不需要使用工具:\n1. 需要联网查询的内容\n2. 需要计算的内容\n3. 需要查询实时性的内容\n\
-    如果我的输入满足这几种情况，返回1。其他输入，请你回复0，你只要返回一个数字\n这是我的问题:"
+  # 主路由 - 将请求分类到三大主类
+  router_main: "你是总控意图识别器，负责将用户问题分类到正确的处理路径。\n\n【分类目标】\n将用户问题分类为以下三类之一：\n1️⃣ knowledge_qa - 知识问答（从知识库或模型知识回答）\n\
+    2️⃣ data_query - 数据查询（需要查询结构化数据或实时信息）\n3️⃣ tool_execution - 工具执行（需要调用外部工具或API）\n\n【分类规则】\n\n\
+    ▶ knowledge_qa（知识问答）：\n  - 概念解释、原理说明\n  - 技术咨询、编程问题\n  - 文档内容查询\n  - 历史事件、常识问答\n  - 文本创作、代码编写\n\
+    \  示例：「什么是机器学习？」「Python如何读取文件？」「解释一下区块链原理」\n\n▶ data_query（数据查询）：\n  - 数据库查询（销量、库存、用户等业务数据）\n\
+    \  - 实时信息（天气、股票、新闻）\n  - 监控指标查询（Prometheus等）\n  - 统计分析请求\n  示例：「查询今天的销售额」「北京现在天气如何」「查看服务器CPU使用率」\n\
+    \n▶ tool_execution（工具执行）：\n  - 互联网搜索（Google、Bing等）\n  - 数学计算\n  - 图像生成\n  - 地图/位置查询\n  - 学术文献检索\n\
+    \  - URL内容读取\n  示例：「搜索最新的AI论文」「计算复杂表达式」「生成一张风景图」\n\n【输出格式】\n只返回以下之一：knowledge_qa 或 data_query 或 tool_execution\n\
+    不要有任何其他内容。\n\n用户问题："
+  
+  # 简化版主路由 - 更快响应
+  router_main_simple: "分类用户问题类型，只返回其中之一：\n- knowledge_qa：知识问答、概念解释、编程咨询\n- data_query：数据查询、实时信息、统计分析\n\
+    - tool_execution：搜索、计算、工具调用\n\n问题："
+  
+  # 兼容旧版 - 0/1分类
+  default: "你是一个意图分类助手，需要判断用户问题是否需要使用外部工具。\n\n【分类规则】\n- 返回 1：需要使用工具（联网搜索、实时查询、数学计算、调用API等）\n\
+    - 返回 0：不需要使用工具（一般性对话、知识问答、代码编写等）\n\n【重要】只返回数字 0 或 1，不要有任何其他内容。\n\n用户问题："
+
+# 【二级路由】子领域意图识别 - 细粒度分类+参数提取
+
+# 2.1 数据查询子路由
+intent_data_query:
+  # 数据库查询意图识别
+  database_intent: "你是数据库查询意图识别器。分析用户的数据查询需求，识别查询类型并提取关键参数。\n\n【查询类型】\n1. sales_query - 销售数据查询\n2. inventory_query - 库存查询\n\
+    3. user_profile - 用户画像/用户信息查询\n4. order_query - 订单查询\n5. product_query - 产品/商品信息查询\n6. metrics_query - 业务指标查询\n\
+    7. other_query - 其他数据查询\n\n【需要提取的参数】\n- time_range: 时间范围（如\"今天\"、\"本月\"、\"2024-01\"、\"最近7天\"）\n- location: 地点/区域（如\"北京\"、\"华东区\"、\"全国\"）\n\
+    - category: 分类/类目（如\"电子产品\"、\"服装\"）\n- metric: 具体指标（如\"销售额\"、\"数量\"、\"增长率\"）\n- user_id: 用户标识\n- product_id: 产品标识\n\
+    - top_n: 排名数量（如\"前10\"）\n\n【输出格式 - JSON】\n```json\n{\n  \"intent\": \"查询类型\",\n  \"parameters\": {\n    \"time_range\": \"提取的时间\"\
+    ,\n    \"location\": \"提取的地点\",\n    \"category\": \"提取的分类\",\n    \"metric\": \"提取的指标\",\n    \"other\": \"其他参数\"\n  }\n}\n```\n\n\
+    【示例】\n问题：查询今天北京地区的电子产品销售额\n输出：\n```json\n{\n  \"intent\": \"sales_query\",\n  \"parameters\": {\n    \"time_range\": \"今天\",\n\
+    \    \"location\": \"北京\",\n    \"category\": \"电子产品\",\n    \"metric\": \"销售额\"\n  }\n}\n```\n\n用户问题："
+  
+  # 实时信息查询
+  realtime_intent: "识别实时信息查询类型：\n1. weather - 天气查询\n2. stock - 股票/金融信息\n3. news - 新闻资讯\n4. metrics - 系统监控指标\n5. other - 其他实时信息\n\
+    \n提取参数：location（地点）、time（时间）、symbol（股票代码）、metric_name（指标名）\n\n输出JSON格式：{\"intent\": \"类型\", \"parameters\": {...}}\n\n问题："
+
+# 2.2 工具执行子路由  
+intent_tool_execution:
+  # 搜索类工具
+  search_intent: "识别搜索工具类型：\n1. internet_search - 互联网搜索（Google/Bing/DuckDuckGo）\n2. academic_search - 学术检索（arXiv/论文）\n3. wiki_search - 维基百科搜索\n\
+    4. youtube_search - YouTube视频搜索\n5. local_kb_search - 本地知识库搜索\n\n提取参数：query（搜索关键词）、language（语言）、time_range（时间范围）\n\n输出JSON格式：\
+    {\"intent\": \"类型\", \"parameters\": {...}}\n\n问题："
+  
+  # 计算类工具
+  compute_intent: "识别计算任务类型：\n1. math_calculate - 数学计算（基础运算、复杂表达式）\n2. wolfram_compute - Wolfram Alpha计算（高级数学、科学计算）\n3. data_analysis - 数据分析\n\
+    \n提取参数：expression（计算表达式）、formula（公式）\n\n输出JSON格式：{\"intent\": \"类型\", \"parameters\": {...}}\n\n问题："
+  
+  # 多模态工具
+  multimodal_intent: "识别多模态任务类型：\n1. text2image - 文本生成图像\n2. image_edit - 图像编辑\n3. text2speech - 文本转语音\n4. speech2text - 语音转文本\n\n提取参数：\
+    prompt（提示词）、style（风格）、size（尺寸）\n\n输出JSON格式：{\"intent\": \"类型\", \"parameters\": {...}}\n\n问题："
+  
+  # 位置服务工具
+  location_intent: "识别位置服务类型：\n1. poi_search - POI/地点搜索\n2. weather_query - 天气查询\n3. route_plan - 路线规划\n4. nearby_search - 附近搜索\n\n提取参数：\
+    location（地点）、keyword（关键词）、radius（半径）、city（城市）\n\n输出JSON格式：{\"intent\": \"类型\", \"parameters\": {...}}\n\n问题："
+
+# 2.3 知识问答子路由（可选，用于更细化的知识库路由）
+intent_knowledge_qa:
+  # 知识库选择
+  kb_selector: "选择最合适的知识库：\n1. technical_docs - 技术文档\n2. product_manual - 产品手册\n3. faq - 常见问题\n4. policy_docs - 政策文件\n5. general - 通用知识\n\
+    \n只返回知识库名称，不要其他内容。\n\n问题："
+  
+  # 问答策略选择
+  qa_strategy: "选择问答策略：\n1. direct_answer - 直接回答（概念、事实）\n2. step_by_step - 分步解答（教程、操作）\n3. code_generation - 代码生成\n4. summarization - 摘要总结\n\
+    \n只返回策略名称。\n\n问题："
 
 # 普通 LLM 用模板
 llm_model:
