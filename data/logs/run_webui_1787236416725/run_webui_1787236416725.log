@@ -1,6 +1,0 @@
-2026-08-20 22:33:46,890 httpx        33040 INFO     HTTP Request: GET http://127.0.0.1:7861/tools "HTTP/1.1 200 OK"
-2026-08-20 22:34:06,162 httpx        33040 INFO     HTTP Request: GET http://127.0.0.1:7861/knowledge_base/list_knowledge_bases "HTTP/1.1 200 OK"
-2026-08-20 22:34:06,466 httpx        33040 INFO     HTTP Request: GET http://127.0.0.1:7861/knowledge_base/list_knowledge_bases "HTTP/1.1 200 OK"
-2026-08-20 22:34:11,646 httpx        33040 INFO     HTTP Request: GET http://127.0.0.1:7861/api/v1/mcp_connections/profile "HTTP/1.1 200 OK"
-2026-08-20 22:34:11,678 httpx        33040 INFO     HTTP Request: GET http://127.0.0.1:7861/api/v1/mcp_connections/ "HTTP/1.1 200 OK"
-2026-08-20 22:34:14,210 httpx        33040 INFO     HTTP Request: GET http://127.0.0.1:7861/tools "HTTP/1.1 200 OK"
