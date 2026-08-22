@@ -34,6 +34,11 @@ class EnsembleRetrieverService(BaseRetrieverService):
 
         # cutter = Cutter()
         docs = list(vectorstore.docstore._dict.values())
+        
+        # 检查是否有文档
+        if not docs:
+            raise ValueError("向量库为空，无法创建 BM25 检索器。请先加载文档到知识库。")
+        
         bm25_retriever = BM25Retriever.from_documents(
             docs,
             preprocess_func=jieba.lcut_for_search,
