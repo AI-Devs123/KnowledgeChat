@@ -986,6 +986,125 @@ def get_tool_config(name: str = None) -> Dict:
         return Settings.tool_settings.model_dump().get(name, {})
 
 
+def count_tokens(text: str, model_name: str = None) -> int:
+    """
+    计算文本的 Token 数量
+    
+    Args:
+        text: 要计算的文本
+        model_name: 模型名称，用于选择合适的计数方法
+    
+    Returns:
+        Token 数量
+    """
+    if not text:
+        return 0
+    
+    # 尝试使用 tiktoken (主要用于 OpenAI 系模型)
+    try:
+        import tiktoken
+        
+        # 为不同模型选择合适的编码器
+        if model_name:
+            # OpenAI 模型使用对应的编码器
+            if "gpt-4" in model_name.lower():
+                encoding = tiktoken.encoding_for_model("gpt-4")
+            elif "gpt-3.5" in model_name.lower():
+                encoding = tiktoken.encoding_for_model("gpt-3.5-turbo")
+            else:
+                # 其他模型使用 cl100k_base (适用于大部分现代模型)
+                encoding = tiktoken.get_encoding("cl100k_base")
+        else:
+            # 默认使用 cl100k_base
+            encoding = tiktoken.get_encoding("cl100k_base")
+        
+        return len(encoding.encode(text))
+    
+    except (ImportError, Exception) as e:
+        # tiktoken 不可用或出错时，使用启发式方法
+        # 对于中文为主的文本，经验值：1 token ≈ 2-3 个字符（取中间值 2.5）
+        logger.debug(f"tiktoken unavailable, using heuristic method: {e}")
+        return int(len(text) / 2.5)
+
+
+def get_model_context_window(model_name: str = None) -> int:
+    """
+    获取模型的上下文窗口大小
+    
+    Args:
+        model_name: 模型名称
+    
+    Returns:
+        上下文窗口大小（Token 数）
+    """
+    from chatchat.settings import Settings
+    
+    model_name = model_name or get_default_llm()
+    
+    # 从配置中获取模型窗口大小
+    token_config = Settings.model_settings.TOKEN_BUDGET_CONFIG
+    
+    # 兼容两种配置格式
+    model_windows = token_config.get("model_windows") or token_config.get("model_context_limits", {})
+    default_window = token_config.get("default_context_window") or model_windows.get("default", 8192)
+    
+    return model_windows.get(model_name, default_window)
+
+
+def calculate_token_budgets(model_name: str = None, total_budget: int = None) -> Dict[str, int]:
+    """
+    计算各部分的 Token 预算分配
+    
+    Args:
+        model_name: 模型名称
+        total_budget: 总预算（如果不指定，则使用模型的上下文窗口）
+    
+    Returns:
+        各部分的 Token 预算字典，包含：
+        - total: 总预算
+        - rag: RAG 切片预算
+        - system: System Prompt 预算
+        - history: 历史对话预算
+        - safety: 安全余量
+        - usable: 可用预算（扣除安全余量后）
+    """
+    from chatchat.settings import Settings
+    
+    # 获取总预算
+    if total_budget is None:
+        total_budget = get_model_context_window(model_name)
+    
+    # 获取配置
+    token_config = Settings.model_settings.TOKEN_BUDGET_CONFIG
+    
+    # 安全余量（从总预算中预先扣除）
+    safety_ratio = token_config.get("safety_margin", 0.05)
+    safety_budget = int(total_budget * safety_ratio)
+    usable_budget = total_budget - safety_budget
+    
+    # 获取预算比例配置（兼容两种格式）
+    budget_ratios = token_config.get("budget_ratios") or token_config.get("budget_allocation", {})
+    
+    # 兼容新旧字段名
+    rag_ratio = budget_ratios.get("rag", budget_ratios.get("rag_content", 0.50))
+    system_ratio = budget_ratios.get("system", budget_ratios.get("system_prompt", 0.20))
+    history_ratio = budget_ratios.get("history", 0.30)
+    
+    # 从可用预算中分配（已扣除 safety_margin）
+    budgets = {
+        "total": total_budget,
+        "usable": usable_budget,
+        "rag": int(usable_budget * rag_ratio),
+        "system": int(usable_budget * system_ratio),
+        "history": int(usable_budget * history_ratio),
+        "safety": safety_budget,
+    }
+    
+    logger.debug(f"Token budgets for model {model_name}: {budgets}")
+    
+    return budgets
+
+
 def is_port_in_use(port):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         return sock.connect_ex(("localhost", port)) == 0

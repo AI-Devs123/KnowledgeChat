@@ -483,6 +483,56 @@ class ApiModelSettings(BaseFileSettings):
         ]
     """模型平台配置"""
 
+    TOKEN_BUDGET_CONFIG: t.Dict[str, t.Any] = {
+        "default_context_window": 8192,
+        "model_windows": {
+            # OpenAI 系列
+            "gpt-4": 8192,
+            "gpt-4-32k": 32768,
+            "gpt-4o": 128000,
+            "gpt-3.5-turbo": 4096,
+            "gpt-3.5-turbo-16k": 16384,
+            # 智谱系列
+            "glm4-chat": 128000,
+            "chatglm3-6b": 8192,
+            "chatglm_pro": 32768,
+            "chatglm_turbo": 32768,
+            "chatglm_std": 4096,
+            "chatglm_lite": 4096,
+            # 千问系列
+            "qwen:7b": 8192,
+            "qwen2:7b": 32768,
+            "qwen-turbo": 8192,
+            "qwen-plus": 32768,
+            "qwen-max": 8192,
+            "qwen-max-longcontext": 30720,
+            "Qwen-2": 32768,
+            "qwen2-instruct": 32768,
+            # 百度系列
+            "ERNIE-Bot": 8192,
+            "ERNIE-Bot-turbo": 8192,
+            "ERNIE-Bot-4": 8192,
+            # 星火系列
+            "SparkDesk": 8192,
+        },
+        "budget_ratios": {
+            "rag": 0.50,
+            "system": 0.20,
+            "history": 0.25,
+            "safety": 0.05,
+        },
+    }
+    """
+    Token 预算管理配置
+    - default_context_window: 默认上下文窗口大小（当模型未在 model_windows 中配置时使用）
+    - model_windows: 各模型的上下文窗口大小（Token 数）
+    - budget_ratios: Token 预算分配比例
+      - rag: RAG 知识库切片预算（默认 50%，优先级最高）
+      - system: System Prompt 和工具描述预算（默认 20%）
+      - history: 历史对话预算（默认 25%）
+      - safety: 安全余量（默认 5%，用于应对估算误差）
+    """
+
 
 class ToolSettings(BaseFileSettings):
     """Agent 工具配置项"""

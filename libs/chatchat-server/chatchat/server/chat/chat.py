@@ -34,10 +34,67 @@ from chatchat.server.utils import (
     wrap_done,
     get_default_llm,
     build_logger,
-    get_ChatPlatformAIParams
+    get_ChatPlatformAIParams,
+    count_tokens,
+    calculate_token_budgets,
 )
 
 logger = build_logger()
+
+
+def truncate_history_by_token_budget(
+    messages: List[Dict],
+    model_name: str,
+    token_budget: int,
+) -> List[Dict]:
+    """
+    根据 Token 预算截断历史记录
+    
+    Args:
+        messages: 原始历史消息列表（已按时间正序排列）
+        model_name: 模型名称
+        token_budget: 历史记录的 Token 预算
+    
+    Returns:
+        截断后的历史消息列表
+    """
+    if not messages:
+        return []
+    
+    # 从最新的消息开始，逆向累计 Token
+    truncated_messages = []
+    total_tokens = 0
+    
+    # 从后向前遍历（保留最新的消息）
+    for message in reversed(messages):
+        # 计算当前消息的 Token 数
+        message_tokens = count_tokens(message.get("content", ""), model_name)
+        
+        # 如果加上当前消息会超出预算，则停止
+        if total_tokens + message_tokens > token_budget:
+            logger.debug(f"History truncated: {len(truncated_messages)} messages kept, "
+                        f"{len(messages) - len(truncated_messages)} messages dropped, "
+                        f"total tokens: {total_tokens}/{token_budget}")
+            break
+        
+        # 添加到结果列表（注意：此时是倒序的）
+        truncated_messages.insert(0, message)
+        total_tokens += message_tokens
+    
+    # 确保历史记录是成对的（user + assistant）
+    # 如果第一条不是 user，则删除它
+    if truncated_messages and truncated_messages[0].get("role") != "user":
+        truncated_messages.pop(0)
+        logger.debug("Removed incomplete history pair (missing user message)")
+    
+    # 如果最后一条不是 assistant，也删除它
+    if truncated_messages and truncated_messages[-1].get("role") != "assistant":
+        truncated_messages.pop()
+        logger.debug("Removed incomplete history pair (missing assistant message)")
+    
+    logger.info(f"History loaded: {len(truncated_messages)} messages, {total_tokens} tokens")
+    
+    return truncated_messages
 
 
 def create_models_from_config(configs, callbacks, stream, max_tokens):
@@ -77,17 +134,38 @@ def create_models_chains(
     history_len, prompts, models, tools, callbacks, conversation_id, metadata,  use_mcp: bool = False
 ):
 
-    # 从数据库获取conversation_id对应的 intermediate_steps 、 mcp_connections
+    # 获取模型名称
+    model_name = models["action_model"].model if hasattr(models["action_model"], "model") else get_default_llm()
+    
+    # 计算 Token 预算
+    token_budgets = calculate_token_budgets(model_name)
+    history_token_budget = token_budgets["history"]
+    
+    logger.debug(f"Token budget for history: {history_token_budget} tokens")
+    
+    # 从数据库获取conversation_id对应的历史消息
+    # 如果 history_len > 0，则获取指定数量；否则获取较多消息用于后续 Token 截断
+    fetch_limit = history_len if history_len > 0 else 50  # 默认最多获取 50 轮
     messages = filter_message(
-        conversation_id=conversation_id, limit=history_len
+        conversation_id=conversation_id, limit=fetch_limit
     )
+    
     # 返回的记录按时间倒序，转为正序
     messages = list(reversed(messages))
-    history: List[Union[List, Tuple]] = []
+    
+    # 构建原始历史记录
+    raw_history: List[Dict] = []
     for message in messages:
-        history.append({"role": "user", "content": message["query"]}) 
-        history.append({"role": "assistant", "content":  message["response"]})  
-
+        raw_history.append({"role": "user", "content": message["query"]}) 
+        raw_history.append({"role": "assistant", "content": message["response"]})  
+    
+    # 根据 Token 预算截断历史记录
+    history = truncate_history_by_token_budget(
+        messages=raw_history,
+        model_name=model_name,
+        token_budget=history_token_budget,
+    )
+    
     intermediate_steps = loads(messages[-1].get("metadata", {}).get("intermediate_steps"), valid_namespaces=["langchain_chatchat", "agent_toolkits", "all_tools", "tool"] )  if len(messages)>0 and messages[-1].get("metadata") is not None else []
     llm = models["action_model"]
     llm.callbacks = callbacks

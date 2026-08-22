@@ -19,6 +19,40 @@ MAX_TOKENS:
 # LLM通用对话参数
 TEMPERATURE: 0.7
 
+# Token 预算管理配置：控制上下文各部分的 Token 分配
+TOKEN_BUDGET_CONFIG:
+  # 不同模型的上下文窗口大小（单位：Token）
+  model_context_limits:
+    glm-4: 128000
+    glm-4-flash: 128000
+    glm-3-turbo: 8192
+    glm4-chat: 128000       # 添加 glm4-chat 映射
+    deepseek-chat: 32768
+    deepseek-coder: 16384
+    gpt-3.5-turbo: 16385
+    gpt-4: 8192
+    gpt-4o: 128000
+    qwen2:7b: 32768         # 添加 qwen2:7b 映射
+    default: 8192           # 默认上下文窗口
+  
+  # Token 预算分配比例（总和 = 1.0 即 100%，不包含 safety_margin）
+  # safety_margin 会从总预算中预先扣除，剩余部分按以下比例分配
+  budget_allocation:
+    rag_content: 0.50      # RAG 检索内容（最高优先级，必须保留）- 50%
+    system_prompt: 0.20    # 系统提示词 + 工具描述 - 20%
+    history: 0.30          # 对话历史（动态调整）- 30%
+    # 总和 = 1.0 (100%)，这是在扣除 safety_margin 后的可用预算
+  
+  # 历史记录管理策略
+  history_strategy:
+    recent_full_rounds: 3   # 最近 N 轮完整保留
+    summary_enabled: true   # 是否启用历史摘要
+    summary_max_tokens: 100 # 每条摘要的最大 Token 数
+    summary_model: ''       # 用于生成摘要的模型（空则使用当前模型）
+  
+  # 安全边界（从总预算中预先扣除，防止 Token 估算误差导致超出窗口）
+  safety_margin: 0.05  # 预留 5% 作为安全边界
+
 # 支持的Agent模型
 SUPPORT_AGENT_MODELS:
   - chatglm3-6b
