@@ -1,0 +1,302 @@
+[
+  {
+    "query": "如何启动API服务",
+    "expected_docs": ["README", "quick_start"],
+    "category": "操作指南",
+    "note": "短查询，包含明确动词"
+  },
+  {
+    "query": "分布式训练的并行策略有哪些",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "技术原理",
+    "note": "长查询，语义丰富"
+  },
+  {
+    "query": "大模型推理优化方法",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "技术原理",
+    "note": "中等长度，关键词查询"
+  },
+  {
+    "query": "知识库支持哪些文件格式",
+    "expected_docs": ["README"],
+    "category": "功能说明",
+    "note": "疑问句式"
+  },
+  {
+    "query": "langchain的应用场景",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "应用场景",
+    "note": "特定技术名词"
+  },
+  {
+    "query": "什么是指令对齐训练",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "概念理解",
+    "note": "定义类查询"
+  },
+  {
+    "query": "大模型技术栈",
+    "expected_docs": ["大模型技术栈"],
+    "category": "综合知识",
+    "note": "极短关键词"
+  },
+  {
+    "query": "如何实现分布式训练中的数据并行和模型并行",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "技术细节",
+    "note": "复杂长查询，多个概念"
+  },
+  {
+    "query": "推理优化策略",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "技术原理",
+    "note": "关键词组合"
+  },
+  {
+    "query": "大模型的实战应用有哪些",
+    "expected_docs": ["大模型技术栈-实战与应用", "大模型应用技术原理"],
+    "category": "应用场景",
+    "note": "实战类查询"
+  },
+  {
+    "query": "算法原理",
+    "expected_docs": ["大模型技术栈-算法与原理"],
+    "category": "技术原理",
+    "note": "极短通用词"
+  },
+  {
+    "query": "如何进行指令微调",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "技术实现",
+    "note": "操作类问题"
+  },
+  {
+    "query": "分布式训练架构",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "技术架构",
+    "note": "架构类查询"
+  },
+  {
+    "query": "模型并行的实现方式",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "技术细节",
+    "note": "具体实现查询"
+  },
+  {
+    "query": "什么是RLHF",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "概念理解",
+    "note": "技术缩写"
+  },
+  {
+    "query": "推理加速技术",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "技术原理",
+    "note": "性能优化"
+  },
+  {
+    "query": "RAG应用开发",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "应用场景",
+    "note": "具体应用技术"
+  },
+  {
+    "query": "数据并行和模型并行的区别",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "对比分析",
+    "note": "对比类问题"
+  },
+  {
+    "query": "大模型训练流程",
+    "expected_docs": ["大模型技术栈-算法与原理"],
+    "category": "流程说明",
+    "note": "流程类查询"
+  },
+  {
+    "query": "如何优化模型推理性能",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "优化方案",
+    "note": "方案类问题"
+  },
+  {
+    "query": "Transformer架构",
+    "expected_docs": ["大模型技术栈-算法与原理"],
+    "category": "技术架构",
+    "note": "经典架构"
+  },
+  {
+    "query": "什么是prompt engineering",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "概念理解",
+    "note": "英文术语"
+  },
+  {
+    "query": "分布式训练中的通信优化",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "优化技术",
+    "note": "深度技术点"
+  },
+  {
+    "query": "大模型的对齐方法",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "技术方法",
+    "note": "方法论查询"
+  },
+  {
+    "query": "推理框架选择",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "技术选型",
+    "note": "选型类问题"
+  },
+  {
+    "query": "LangChain框架介绍",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "框架介绍",
+    "note": "框架类查询"
+  },
+  {
+    "query": "梯度累积技术",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "训练技术",
+    "note": "具体技术"
+  },
+  {
+    "query": "如何评估大模型效果",
+    "expected_docs": ["大模型技术栈-实战与应用"],
+    "category": "评估方法",
+    "note": "评估类问题"
+  },
+  {
+    "query": "SFT训练",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "训练方法",
+    "note": "训练缩写"
+  },
+  {
+    "query": "量化技术介绍",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "优化技术",
+    "note": "压缩技术"
+  },
+  {
+    "query": "Agent应用开发",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "应用开发",
+    "note": "智能体应用"
+  },
+  {
+    "query": "ZeRO优化器",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "优化工具",
+    "note": "具体工具"
+  },
+  {
+    "query": "instruction tuning原理",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "技术原理",
+    "note": "英文技术术语"
+  },
+  {
+    "query": "KV Cache优化",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "缓存优化",
+    "note": "具体优化点"
+  },
+  {
+    "query": "向量数据库应用",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "数据库技术",
+    "note": "基础设施"
+  },
+  {
+    "query": "流水线并行",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "并行技术",
+    "note": "并行策略"
+  },
+  {
+    "query": "如何构建奖励模型",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "模型构建",
+    "note": "构建类问题"
+  },
+  {
+    "query": "Flash Attention技术",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "注意力优化",
+    "note": "前沿技术"
+  },
+  {
+    "query": "知识库构建方法",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "应用实践",
+    "note": "实践类查询"
+  },
+  {
+    "query": "混合并行策略",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "并行技术",
+    "note": "组合策略"
+  },
+  {
+    "query": "PPO算法详解",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "算法原理",
+    "note": "强化学习算法"
+  },
+  {
+    "query": "模型剪枝方法",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "压缩技术",
+    "note": "模型压缩"
+  },
+  {
+    "query": "对话系统设计",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "系统设计",
+    "note": "应用设计"
+  },
+  {
+    "query": "张量并行实现",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "并行实现",
+    "note": "底层实现"
+  },
+  {
+    "query": "DPO训练方法",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "训练方法",
+    "note": "新兴方法"
+  },
+  {
+    "query": "推理并发优化",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "并发优化",
+    "note": "性能优化"
+  },
+  {
+    "query": "文档解析技术",
+    "expected_docs": ["大模型应用技术原理"],
+    "category": "基础技术",
+    "note": "文档处理"
+  },
+  {
+    "query": "通信效率优化",
+    "expected_docs": ["分布式训练技术原理"],
+    "category": "效率优化",
+    "note": "通信优化"
+  },
+  {
+    "query": "人类反馈学习",
+    "expected_docs": ["大模型指令对齐训练原理"],
+    "category": "学习方法",
+    "note": "RLHF相关"
+  },
+  {
+    "query": "批处理优化策略",
+    "expected_docs": ["大模型推理优化策略"],
+    "category": "批处理",
+    "note": "批处理优化"
+  }
+]

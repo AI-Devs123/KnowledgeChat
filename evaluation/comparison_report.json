@@ -1,0 +1,4642 @@
+{
+  "timestamp": "2026-08-22T13:34:32.015964",
+  "config": {
+    "top_k": 5,
+    "score_threshold": 0.5
+  },
+  "baseline": {
+    "retriever_type": "ensemble",
+    "top_k": 5,
+    "score_threshold": 0.5,
+    "queries": [
+      {
+        "query": "如何启动API服务",
+        "category": "操作指南",
+        "expected_docs": [
+          "README",
+          "quick_start"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型技术栈-实战与应用.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 4142.456531524658
+      },
+      {
+        "query": "分布式训练的并行策略有哪些",
+        "category": "技术原理",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 721.0659980773926
+      },
+      {
+        "query": "大模型推理优化方法",
+        "category": "技术原理",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md",
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 702.2068500518799
+      },
+      {
+        "query": "知识库支持哪些文件格式",
+        "category": "功能说明",
+        "expected_docs": [
+          "README"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 845.7376956939697
+      },
+      {
+        "query": "langchain的应用场景",
+        "category": "应用场景",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型技术栈-实战与应用.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 678.2045364379883
+      },
+      {
+        "query": "什么是指令对齐训练",
+        "category": "概念理解",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 725.454568862915
+      },
+      {
+        "query": "大模型技术栈",
+        "category": "综合知识",
+        "expected_docs": [
+          "大模型技术栈"
+        ],
+        "retrieved_docs": [
+          "大模型技术栈-实战与应用.md",
+          "分布式训练技术原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.2,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 708.4300518035889
+      },
+      {
+        "query": "如何实现分布式训练中的数据并行和模型并行",
+        "category": "技术细节",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 719.3961143493652
+      },
+      {
+        "query": "推理优化策略",
+        "category": "技术原理",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 692.2883987426758
+      },
+      {
+        "query": "大模型的实战应用有哪些",
+        "category": "应用场景",
+        "expected_docs": [
+          "大模型技术栈-实战与应用",
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型技术栈-实战与应用.md",
+          "分布式训练技术原理.md",
+          "大模型指令对齐训练原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 755.7907104492188
+      },
+      {
+        "query": "算法原理",
+        "category": "技术原理",
+        "expected_docs": [
+          "大模型技术栈-算法与原理"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 686.4867210388184
+      },
+      {
+        "query": "如何进行指令微调",
+        "category": "技术实现",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 732.6905727386475
+      },
+      {
+        "query": "分布式训练架构",
+        "category": "技术架构",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 826.8642425537109
+      },
+      {
+        "query": "模型并行的实现方式",
+        "category": "技术细节",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.2,
+        "recall": 1.0,
+        "mrr": 0.2,
+        "time_ms": 723.4141826629639
+      },
+      {
+        "query": "什么是RLHF",
+        "category": "概念理解",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 1540.0493144989014
+      },
+      {
+        "query": "推理加速技术",
+        "category": "技术原理",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型技术栈-实战与应用.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 722.9089736938477
+      },
+      {
+        "query": "RAG应用开发",
+        "category": "应用场景",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型技术栈-实战与应用.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 737.5063896179199
+      },
+      {
+        "query": "数据并行和模型并行的区别",
+        "category": "对比分析",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 745.3501224517822
+      },
+      {
+        "query": "大模型训练流程",
+        "category": "流程说明",
+        "expected_docs": [
+          "大模型技术栈-算法与原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 853.5246849060059
+      },
+      {
+        "query": "如何优化模型推理性能",
+        "category": "优化方案",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 749.5293617248535
+      },
+      {
+        "query": "Transformer架构",
+        "category": "技术架构",
+        "expected_docs": [
+          "大模型技术栈-算法与原理"
+        ],
+        "retrieved_docs": [
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 785.6042385101318
+      },
+      {
+        "query": "什么是prompt engineering",
+        "category": "概念理解",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.2,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 846.7278480529785
+      },
+      {
+        "query": "分布式训练中的通信优化",
+        "category": "优化技术",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 801.7482757568359
+      },
+      {
+        "query": "大模型的对齐方法",
+        "category": "技术方法",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 1020.5719470977783
+      },
+      {
+        "query": "推理框架选择",
+        "category": "技术选型",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型技术栈-实战与应用.md",
+          "大模型应用技术原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.2,
+        "recall": 1.0,
+        "mrr": 0.2,
+        "time_ms": 822.8888511657715
+      },
+      {
+        "query": "LangChain框架介绍",
+        "category": "框架介绍",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型技术栈-实战与应用.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 828.6986351013184
+      },
+      {
+        "query": "梯度累积技术",
+        "category": "训练技术",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 800.9302616119385
+      },
+      {
+        "query": "如何评估大模型效果",
+        "category": "评估方法",
+        "expected_docs": [
+          "大模型技术栈-实战与应用"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 819.133996963501
+      },
+      {
+        "query": "SFT训练",
+        "category": "训练方法",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 815.3247833251953
+      },
+      {
+        "query": "量化技术介绍",
+        "category": "优化技术",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 813.5302066802979
+      },
+      {
+        "query": "Agent应用开发",
+        "category": "应用开发",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型应用技术原理.md",
+          "大模型技术栈-实战与应用.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 929.6019077301025
+      },
+      {
+        "query": "ZeRO优化器",
+        "category": "优化工具",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 1336.5209102630615
+      },
+      {
+        "query": "instruction tuning原理",
+        "category": "技术原理",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型指令对齐训练原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 811.3667964935303
+      },
+      {
+        "query": "KV Cache优化",
+        "category": "缓存优化",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 1.0,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 855.9048175811768
+      },
+      {
+        "query": "向量数据库应用",
+        "category": "数据库技术",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型技术栈-实战与应用.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 992.1724796295166
+      },
+      {
+        "query": "流水线并行",
+        "category": "并行技术",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 753.9339065551758
+      },
+      {
+        "query": "如何构建奖励模型",
+        "category": "模型构建",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 779.1404724121094
+      },
+      {
+        "query": "Flash Attention技术",
+        "category": "注意力优化",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 824.378252029419
+      },
+      {
+        "query": "知识库构建方法",
+        "category": "应用实践",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.2,
+        "recall": 1.0,
+        "mrr": 0.2,
+        "time_ms": 802.4225234985352
+      },
+      {
+        "query": "混合并行策略",
+        "category": "并行技术",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.0,
+        "recall": 0.0,
+        "mrr": 0.0,
+        "time_ms": 723.5393524169922
+      },
+      {
+        "query": "PPO算法详解",
+        "category": "算法原理",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 1023.7014293670654
+      },
+      {
+        "query": "模型剪枝方法",
+        "category": "压缩技术",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "分布式训练技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 727.9677391052246
+      },
+      {
+        "query": "对话系统设计",
+        "category": "系统设计",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 910.2675914764404
+      },
+      {
+        "query": "张量并行实现",
+        "category": "并行实现",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.2,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 723.3500480651855
+      },
+      {
+        "query": "DPO训练方法",
+        "category": "训练方法",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型推理优化策略.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 814.7850036621094
+      },
+      {
+        "query": "推理并发优化",
+        "category": "并发优化",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.8,
+        "recall": 1.0,
+        "mrr": 0.5,
+        "time_ms": 821.2244510650635
+      },
+      {
+        "query": "文档解析技术",
+        "category": "基础技术",
+        "expected_docs": [
+          "大模型应用技术原理"
+        ],
+        "retrieved_docs": [
+          "大模型应用技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型应用技术原理.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.4,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 825.1986503601074
+      },
+      {
+        "query": "通信效率优化",
+        "category": "效率优化",
+        "expected_docs": [
+          "分布式训练技术原理"
+        ],
+        "retrieved_docs": [
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md",
+          "分布式训练技术原理.md",
+          "分布式训练技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 832.4713706970215
+      },
+      {
+        "query": "人类反馈学习",
+        "category": "学习方法",
+        "expected_docs": [
+          "大模型指令对齐训练原理"
+        ],
+        "retrieved_docs": [
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型应用技术原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 773.6415863037109
+      },
+      {
+        "query": "批处理优化策略",
+        "category": "批处理",
+        "expected_docs": [
+          "大模型推理优化策略"
+        ],
+        "retrieved_docs": [
+          "大模型推理优化策略.md",
+          "大模型推理优化策略.md",
+          "大模型应用技术原理.md",
+          "大模型指令对齐训练原理.md",
+          "大模型推理优化策略.md"
+        ],
+        "scores": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "precision": 0.6,
+        "recall": 1.0,
+        "mrr": 1.0,
+        "time_ms": 827.3160457611084
+      }
+    ],
+    "metrics": {
+      "avg_precision": 0.46399999999999997,
+      "avg_recall": 0.84,
+      "avg_mrr": 0.7119999999999999,
+      "avg_time_ms": 889.0684080123901,
+      "total_queries": 50,
+      "f1_score": 0.5977914110429448
+    }
+  },
+  "optimizations": [
+    {
+      "strategy": "vectorstore",
+      "description": "纯向量检索 - 仅使用语义相似度",
+      "result": {
+        "retriever_type": "vectorstore",
+        "top_k": 5,
+        "score_threshold": 0.5,
+        "queries": [
+          {
+            "query": "如何启动API服务",
+            "category": "操作指南",
+            "expected_docs": [
+              "README",
+              "quick_start"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 699.4330883026123
+          },
+          {
+            "query": "分布式训练的并行策略有哪些",
+            "category": "技术原理",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "time_ms": 733.8056564331055
+          },
+          {
+            "query": "大模型推理优化方法",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 742.8252696990967
+          },
+          {
+            "query": "知识库支持哪些文件格式",
+            "category": "功能说明",
+            "expected_docs": [
+              "README"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 685.7559680938721
+          },
+          {
+            "query": "langchain的应用场景",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 727.0529270172119
+          },
+          {
+            "query": "什么是指令对齐训练",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 617.8755760192871
+          },
+          {
+            "query": "大模型技术栈",
+            "category": "综合知识",
+            "expected_docs": [
+              "大模型技术栈"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 658.7159633636475
+          },
+          {
+            "query": "如何实现分布式训练中的数据并行和模型并行",
+            "category": "技术细节",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0
+            ],
+            "precision": 0.5,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 683.0365657806396
+          },
+          {
+            "query": "推理优化策略",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 703.9029598236084
+          },
+          {
+            "query": "大模型的实战应用有哪些",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型技术栈-实战与应用",
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "time_ms": 723.1714725494385
+          },
+          {
+            "query": "算法原理",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 686.1083507537842
+          },
+          {
+            "query": "如何进行指令微调",
+            "category": "技术实现",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 748.694896697998
+          },
+          {
+            "query": "分布式训练架构",
+            "category": "技术架构",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "time_ms": 703.0019760131836
+          },
+          {
+            "query": "模型并行的实现方式",
+            "category": "技术细节",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 733.2305908203125
+          },
+          {
+            "query": "什么是RLHF",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 702.2476196289062
+          },
+          {
+            "query": "推理加速技术",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 839.409351348877
+          },
+          {
+            "query": "RAG应用开发",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 710.8652591705322
+          },
+          {
+            "query": "数据并行和模型并行的区别",
+            "category": "对比分析",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 776.8785953521729
+          },
+          {
+            "query": "大模型训练流程",
+            "category": "流程说明",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 713.6611938476562
+          },
+          {
+            "query": "如何优化模型推理性能",
+            "category": "优化方案",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 694.4398880004883
+          },
+          {
+            "query": "Transformer架构",
+            "category": "技术架构",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 685.4760646820068
+          },
+          {
+            "query": "什么是prompt engineering",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 694.2756175994873
+          },
+          {
+            "query": "分布式训练中的通信优化",
+            "category": "优化技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "time_ms": 723.2985496520996
+          },
+          {
+            "query": "大模型的对齐方法",
+            "category": "技术方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 715.39306640625
+          },
+          {
+            "query": "推理框架选择",
+            "category": "技术选型",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 697.9973316192627
+          },
+          {
+            "query": "LangChain框架介绍",
+            "category": "框架介绍",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 701.8334865570068
+          },
+          {
+            "query": "梯度累积技术",
+            "category": "训练技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 706.7399024963379
+          },
+          {
+            "query": "如何评估大模型效果",
+            "category": "评估方法",
+            "expected_docs": [
+              "大模型技术栈-实战与应用"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 700.8392810821533
+          },
+          {
+            "query": "SFT训练",
+            "category": "训练方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 987.1349334716797
+          },
+          {
+            "query": "量化技术介绍",
+            "category": "优化技术",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 818.1414604187012
+          },
+          {
+            "query": "Agent应用开发",
+            "category": "应用开发",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 686.5379810333252
+          },
+          {
+            "query": "ZeRO优化器",
+            "category": "优化工具",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 680.0410747528076
+          },
+          {
+            "query": "instruction tuning原理",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 694.453239440918
+          },
+          {
+            "query": "KV Cache优化",
+            "category": "缓存优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 672.30224609375
+          },
+          {
+            "query": "向量数据库应用",
+            "category": "数据库技术",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 743.8240051269531
+          },
+          {
+            "query": "流水线并行",
+            "category": "并行技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 731.9293022155762
+          },
+          {
+            "query": "如何构建奖励模型",
+            "category": "模型构建",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 705.7967185974121
+          },
+          {
+            "query": "Flash Attention技术",
+            "category": "注意力优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 713.4711742401123
+          },
+          {
+            "query": "知识库构建方法",
+            "category": "应用实践",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 646.8522548675537
+          },
+          {
+            "query": "混合并行策略",
+            "category": "并行技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 619.992733001709
+          },
+          {
+            "query": "PPO算法详解",
+            "category": "算法原理",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 745.9750175476074
+          },
+          {
+            "query": "模型剪枝方法",
+            "category": "压缩技术",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 659.3418121337891
+          },
+          {
+            "query": "对话系统设计",
+            "category": "系统设计",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 707.7374458312988
+          },
+          {
+            "query": "张量并行实现",
+            "category": "并行实现",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 644.287109375
+          },
+          {
+            "query": "DPO训练方法",
+            "category": "训练方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 685.6863498687744
+          },
+          {
+            "query": "推理并发优化",
+            "category": "并发优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 710.8516693115234
+          },
+          {
+            "query": "文档解析技术",
+            "category": "基础技术",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 671.504020690918
+          },
+          {
+            "query": "通信效率优化",
+            "category": "效率优化",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 647.2783088684082
+          },
+          {
+            "query": "人类反馈学习",
+            "category": "学习方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [],
+            "scores": [],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 738.215446472168
+          },
+          {
+            "query": "批处理优化策略",
+            "category": "批处理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0
+            ],
+            "precision": 0.5,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 1117.6397800445557
+          }
+        ],
+        "metrics": {
+          "avg_precision": 0.128,
+          "avg_recall": 0.23,
+          "avg_mrr": 0.16566666666666666,
+          "avg_time_ms": 718.7792110443115,
+          "total_queries": 50,
+          "f1_score": 0.16446927374301676
+        }
+      },
+      "improvements": {
+        "avg_precision": -72.41379310344827,
+        "avg_recall": -72.61904761904762,
+        "f1_score": -72.48718019282457,
+        "avg_mrr": -76.73220973782772,
+        "avg_time_ms": 19.15366640332871
+      }
+    },
+    {
+      "strategy": "adaptive",
+      "description": "自适应检索 - 根据查询类型动态选择策略",
+      "result": {
+        "retriever_type": "adaptive",
+        "top_k": 5,
+        "score_threshold": 0.5,
+        "queries": [
+          {
+            "query": "如何启动API服务",
+            "category": "操作指南",
+            "expected_docs": [
+              "README",
+              "quick_start"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型技术栈-实战与应用.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 738.6116981506348
+          },
+          {
+            "query": "分布式训练的并行策略有哪些",
+            "category": "技术原理",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 798.7418174743652
+          },
+          {
+            "query": "大模型推理优化方法",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 820.5912113189697
+          },
+          {
+            "query": "知识库支持哪些文件格式",
+            "category": "功能说明",
+            "expected_docs": [
+              "README"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 745.0895309448242
+          },
+          {
+            "query": "langchain的应用场景",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型技术栈-实战与应用.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 719.5389270782471
+          },
+          {
+            "query": "什么是指令对齐训练",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 781.792163848877
+          },
+          {
+            "query": "大模型技术栈",
+            "category": "综合知识",
+            "expected_docs": [
+              "大模型技术栈"
+            ],
+            "retrieved_docs": [
+              "大模型技术栈-实战与应用.md",
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 728.034257888794
+          },
+          {
+            "query": "如何实现分布式训练中的数据并行和模型并行",
+            "category": "技术细节",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 732.3660850524902
+          },
+          {
+            "query": "推理优化策略",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 713.0846977233887
+          },
+          {
+            "query": "大模型的实战应用有哪些",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型技术栈-实战与应用",
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型技术栈-实战与应用.md",
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 695.065975189209
+          },
+          {
+            "query": "算法原理",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 712.6028537750244
+          },
+          {
+            "query": "如何进行指令微调",
+            "category": "技术实现",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 750.1153945922852
+          },
+          {
+            "query": "分布式训练架构",
+            "category": "技术架构",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 774.1737365722656
+          },
+          {
+            "query": "模型并行的实现方式",
+            "category": "技术细节",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "time_ms": 943.3078765869141
+          },
+          {
+            "query": "什么是RLHF",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 767.3351764678955
+          },
+          {
+            "query": "推理加速技术",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型技术栈-实战与应用.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 878.4310817718506
+          },
+          {
+            "query": "RAG应用开发",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型技术栈-实战与应用.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 740.7243251800537
+          },
+          {
+            "query": "数据并行和模型并行的区别",
+            "category": "对比分析",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 784.8944664001465
+          },
+          {
+            "query": "大模型训练流程",
+            "category": "流程说明",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 714.7669792175293
+          },
+          {
+            "query": "如何优化模型推理性能",
+            "category": "优化方案",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 717.1916961669922
+          },
+          {
+            "query": "Transformer架构",
+            "category": "技术架构",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 823.6117362976074
+          },
+          {
+            "query": "什么是prompt engineering",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 816.8950080871582
+          },
+          {
+            "query": "分布式训练中的通信优化",
+            "category": "优化技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 818.8364505767822
+          },
+          {
+            "query": "大模型的对齐方法",
+            "category": "技术方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 728.5897731781006
+          },
+          {
+            "query": "推理框架选择",
+            "category": "技术选型",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型技术栈-实战与应用.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "time_ms": 773.5726833343506
+          },
+          {
+            "query": "LangChain框架介绍",
+            "category": "框架介绍",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型技术栈-实战与应用.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 774.1670608520508
+          },
+          {
+            "query": "梯度累积技术",
+            "category": "训练技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 796.2517738342285
+          },
+          {
+            "query": "如何评估大模型效果",
+            "category": "评估方法",
+            "expected_docs": [
+              "大模型技术栈-实战与应用"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 815.9339427947998
+          },
+          {
+            "query": "SFT训练",
+            "category": "训练方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 815.3388500213623
+          },
+          {
+            "query": "量化技术介绍",
+            "category": "优化技术",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 819.7777271270752
+          },
+          {
+            "query": "Agent应用开发",
+            "category": "应用开发",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型技术栈-实战与应用.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 819.0310001373291
+          },
+          {
+            "query": "ZeRO优化器",
+            "category": "优化工具",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 799.47829246521
+          },
+          {
+            "query": "instruction tuning原理",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 743.624210357666
+          },
+          {
+            "query": "KV Cache优化",
+            "category": "缓存优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 816.9095516204834
+          },
+          {
+            "query": "向量数据库应用",
+            "category": "数据库技术",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型技术栈-实战与应用.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 821.8026161193848
+          },
+          {
+            "query": "流水线并行",
+            "category": "并行技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 851.8695831298828
+          },
+          {
+            "query": "如何构建奖励模型",
+            "category": "模型构建",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 912.3518466949463
+          },
+          {
+            "query": "Flash Attention技术",
+            "category": "注意力优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 784.7802639007568
+          },
+          {
+            "query": "知识库构建方法",
+            "category": "应用实践",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "time_ms": 827.9867172241211
+          },
+          {
+            "query": "混合并行策略",
+            "category": "并行技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 809.2596530914307
+          },
+          {
+            "query": "PPO算法详解",
+            "category": "算法原理",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 928.1046390533447
+          },
+          {
+            "query": "模型剪枝方法",
+            "category": "压缩技术",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 806.5609931945801
+          },
+          {
+            "query": "对话系统设计",
+            "category": "系统设计",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 735.4085445404053
+          },
+          {
+            "query": "张量并行实现",
+            "category": "并行实现",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 810.4763031005859
+          },
+          {
+            "query": "DPO训练方法",
+            "category": "训练方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 782.9298973083496
+          },
+          {
+            "query": "推理并发优化",
+            "category": "并发优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 851.0208129882812
+          },
+          {
+            "query": "文档解析技术",
+            "category": "基础技术",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 827.0370960235596
+          },
+          {
+            "query": "通信效率优化",
+            "category": "效率优化",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 817.6639080047607
+          },
+          {
+            "query": "人类反馈学习",
+            "category": "学习方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 791.994571685791
+          },
+          {
+            "query": "批处理优化策略",
+            "category": "批处理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 791.7008399963379
+          }
+        ],
+        "metrics": {
+          "avg_precision": 0.48,
+          "avg_recall": 0.84,
+          "avg_mrr": 0.7219999999999999,
+          "avg_time_ms": 791.3885259628296,
+          "total_queries": 50,
+          "f1_score": 0.610909090909091
+        }
+      },
+      "improvements": {
+        "avg_precision": 3.448275862068969,
+        "avg_recall": 0.0,
+        "f1_score": 2.1943573667711735,
+        "avg_mrr": 1.4044943820224733,
+        "avg_time_ms": 10.986767853773438
+      }
+    },
+    {
+      "strategy": "hybrid_fusion",
+      "description": "RRF 融合检索 - 使用倒数排名融合算法",
+      "result": {
+        "retriever_type": "hybrid_fusion",
+        "top_k": 5,
+        "score_threshold": 0.5,
+        "queries": [
+          {
+            "query": "如何启动API服务",
+            "category": "操作指南",
+            "expected_docs": [
+              "README",
+              "quick_start"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 775.0203609466553
+          },
+          {
+            "query": "分布式训练的并行策略有哪些",
+            "category": "技术原理",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 784.0728759765625
+          },
+          {
+            "query": "大模型推理优化方法",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 789.0009880065918
+          },
+          {
+            "query": "知识库支持哪些文件格式",
+            "category": "功能说明",
+            "expected_docs": [
+              "README"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 772.1226215362549
+          },
+          {
+            "query": "langchain的应用场景",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 758.3150863647461
+          },
+          {
+            "query": "什么是指令对齐训练",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 734.0695858001709
+          },
+          {
+            "query": "大模型技术栈",
+            "category": "综合知识",
+            "expected_docs": [
+              "大模型技术栈"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 926.8043041229248
+          },
+          {
+            "query": "如何实现分布式训练中的数据并行和模型并行",
+            "category": "技术细节",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 720.0562953948975
+          },
+          {
+            "query": "推理优化策略",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 702.5480270385742
+          },
+          {
+            "query": "大模型的实战应用有哪些",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型技术栈-实战与应用",
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型技术栈-实战与应用.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 924.3175983428955
+          },
+          {
+            "query": "算法原理",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 757.0128440856934
+          },
+          {
+            "query": "如何进行指令微调",
+            "category": "技术实现",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 707.2453498840332
+          },
+          {
+            "query": "分布式训练架构",
+            "category": "技术架构",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 699.2270946502686
+          },
+          {
+            "query": "模型并行的实现方式",
+            "category": "技术细节",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "time_ms": 700.9987831115723
+          },
+          {
+            "query": "什么是RLHF",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "time_ms": 725.6934642791748
+          },
+          {
+            "query": "推理加速技术",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 712.5253677368164
+          },
+          {
+            "query": "RAG应用开发",
+            "category": "应用场景",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 698.1191635131836
+          },
+          {
+            "query": "数据并行和模型并行的区别",
+            "category": "对比分析",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 719.886064529419
+          },
+          {
+            "query": "大模型训练流程",
+            "category": "流程说明",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 702.5635242462158
+          },
+          {
+            "query": "如何优化模型推理性能",
+            "category": "优化方案",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 743.619441986084
+          },
+          {
+            "query": "Transformer架构",
+            "category": "技术架构",
+            "expected_docs": [
+              "大模型技术栈-算法与原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 671.1447238922119
+          },
+          {
+            "query": "什么是prompt engineering",
+            "category": "概念理解",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "time_ms": 748.7633228302002
+          },
+          {
+            "query": "分布式训练中的通信优化",
+            "category": "优化技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 717.1895503997803
+          },
+          {
+            "query": "大模型的对齐方法",
+            "category": "技术方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 726.590633392334
+          },
+          {
+            "query": "推理框架选择",
+            "category": "技术选型",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型技术栈-实战与应用.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 758.8257789611816
+          },
+          {
+            "query": "LangChain框架介绍",
+            "category": "框架介绍",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型技术栈-实战与应用.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 779.3452739715576
+          },
+          {
+            "query": "梯度累积技术",
+            "category": "训练技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 715.1365280151367
+          },
+          {
+            "query": "如何评估大模型效果",
+            "category": "评估方法",
+            "expected_docs": [
+              "大模型技术栈-实战与应用"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 739.3383979797363
+          },
+          {
+            "query": "SFT训练",
+            "category": "训练方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 732.0256233215332
+          },
+          {
+            "query": "量化技术介绍",
+            "category": "优化技术",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 761.7220878601074
+          },
+          {
+            "query": "Agent应用开发",
+            "category": "应用开发",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 676.1519908905029
+          },
+          {
+            "query": "ZeRO优化器",
+            "category": "优化工具",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 662.3475551605225
+          },
+          {
+            "query": "instruction tuning原理",
+            "category": "技术原理",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "time_ms": 735.5237007141113
+          },
+          {
+            "query": "KV Cache优化",
+            "category": "缓存优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 720.8960056304932
+          },
+          {
+            "query": "向量数据库应用",
+            "category": "数据库技术",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 719.1274166107178
+          },
+          {
+            "query": "流水线并行",
+            "category": "并行技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 808.0301284790039
+          },
+          {
+            "query": "如何构建奖励模型",
+            "category": "模型构建",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型指令对齐训练原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 724.2987155914307
+          },
+          {
+            "query": "Flash Attention技术",
+            "category": "注意力优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 713.2551670074463
+          },
+          {
+            "query": "知识库构建方法",
+            "category": "应用实践",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "time_ms": 720.7005023956299
+          },
+          {
+            "query": "混合并行策略",
+            "category": "并行技术",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "time_ms": 811.3319873809814
+          },
+          {
+            "query": "PPO算法详解",
+            "category": "算法原理",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "time_ms": 722.1882343292236
+          },
+          {
+            "query": "模型剪枝方法",
+            "category": "压缩技术",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 716.3207530975342
+          },
+          {
+            "query": "对话系统设计",
+            "category": "系统设计",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 685.7259273529053
+          },
+          {
+            "query": "张量并行实现",
+            "category": "并行实现",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.4,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "time_ms": 746.1593151092529
+          },
+          {
+            "query": "DPO训练方法",
+            "category": "训练方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型指令对齐训练原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "分布式训练技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 734.5623970031738
+          },
+          {
+            "query": "推理并发优化",
+            "category": "并发优化",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 693.1314468383789
+          },
+          {
+            "query": "文档解析技术",
+            "category": "基础技术",
+            "expected_docs": [
+              "大模型应用技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "time_ms": 724.5855331420898
+          },
+          {
+            "query": "通信效率优化",
+            "category": "效率优化",
+            "expected_docs": [
+              "分布式训练技术原理"
+            ],
+            "retrieved_docs": [
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "分布式训练技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.6,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 690.5312538146973
+          },
+          {
+            "query": "人类反馈学习",
+            "category": "学习方法",
+            "expected_docs": [
+              "大模型指令对齐训练原理"
+            ],
+            "retrieved_docs": [
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型应用技术原理.md",
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.2,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "time_ms": 636.0232830047607
+          },
+          {
+            "query": "批处理优化策略",
+            "category": "批处理",
+            "expected_docs": [
+              "大模型推理优化策略"
+            ],
+            "retrieved_docs": [
+              "大模型推理优化策略.md",
+              "大模型指令对齐训练原理.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md",
+              "大模型推理优化策略.md"
+            ],
+            "scores": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "precision": 0.8,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "time_ms": 720.0338840484619
+          }
+        ],
+        "metrics": {
+          "avg_precision": 0.4,
+          "avg_recall": 0.8,
+          "avg_mrr": 0.6129999999999999,
+          "avg_time_ms": 735.2845191955566,
+          "total_queries": 50,
+          "f1_score": 0.5333333333333333
+        }
+      },
+      "improvements": {
+        "avg_precision": -13.79310344827585,
+        "avg_recall": -4.761904761904753,
+        "f1_score": -10.78270388615216,
+        "avg_mrr": -13.904494382022472,
+        "avg_time_ms": 17.297194167615768
+      }
+    }
+  ]
+}

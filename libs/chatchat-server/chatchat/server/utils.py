@@ -210,6 +210,10 @@ def get_default_llm():
 
 def get_default_embedding():
     available_embeddings = list(get_config_models(model_type="embed").keys())
+    if not available_embeddings:
+        logger.error("No embedding models found in configuration!")
+        raise ValueError("No embedding models configured. Please check MODEL_PLATFORMS in model_settings.yaml")
+    
     if Settings.model_settings.DEFAULT_EMBEDDING_MODEL in available_embeddings:
         return Settings.model_settings.DEFAULT_EMBEDDING_MODEL
     else:

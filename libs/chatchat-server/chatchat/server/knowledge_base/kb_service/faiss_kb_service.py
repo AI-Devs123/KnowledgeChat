@@ -69,8 +69,68 @@ class FaissKBService(KBService):
         top_k: int,
         score_threshold: float = Settings.kb_settings.SCORE_THRESHOLD,
     ) -> List[Tuple[Document, float]]:
+        # 读取配置的检索器类型
+        from pathlib import Path
+        import yaml
+        import logging
+        import os
+        
+        logger = logging.getLogger(__name__)
+        
+        # 默认值（基于评估结果选择）
+        retriever_type = "adaptive"
+        
+        # 查找配置文件 - 使用多种策略
+        config_file = None
+        
+        # 策略1: 使用 CHATCHAT_ROOT 环境变量
+        chatchat_root = os.environ.get('CHATCHAT_ROOT')
+        if chatchat_root:
+            candidate = Path(chatchat_root) / "kb_settings_retriever.yaml"
+            if candidate.exists():
+                config_file = candidate
+                print(f"✅ 从环境变量找到配置: {config_file}")
+        
+        # 策略2: 从当前文件位置向上查找项目根目录
+        if not config_file:
+            current_file = Path(__file__).resolve()
+            # 从 faiss_kb_service.py 向上查找，尝试多个层级
+            # libs/chatchat-server/chatchat/server/knowledge_base/kb_service/faiss_kb_service.py
+            for levels_up in range(3, 8):  # 尝试3-7级
+                project_root = current_file
+                for _ in range(levels_up):
+                    project_root = project_root.parent
+                candidate = project_root / "kb_settings_retriever.yaml"
+                if candidate.exists():
+                    config_file = candidate
+                    print(f"✅ 从项目根目录找到配置 (向上{levels_up}级): {config_file}")
+                    break
+        
+        # 策略3: 当前工作目录
+        if not config_file:
+            candidate = Path("kb_settings_retriever.yaml")
+            if candidate.exists():
+                config_file = candidate
+                print(f"✅ 从工作目录找到配置: {config_file}")
+        
+        # 读取配置
+        if config_file:
+            try:
+                with open(config_file, 'r', encoding='utf-8') as f:
+                    config = yaml.safe_load(f)
+                    retriever_type = config.get('DEFAULT_RETRIEVER_TYPE', retriever_type)
+                logger.info(f"🔍 使用检索器: {retriever_type} (配置: {config_file})")
+                print(f"� 使用检索器: {retriever_type} (配置文件)")
+            except Exception as e:
+                logger.warning(f"读取配置失败: {e}，使用默认 {retriever_type}")
+                print(f"⚠️  读取配置失败: {e}，使用默认: {retriever_type}")
+        else:
+            logger.info(f"🔍 使用检索器: {retriever_type} (默认 - 未找到配置文件)")
+            print(f"ℹ️  未找到配置文件，使用默认: {retriever_type}")
+            print(f"   工作目录: {Path.cwd()}")
+        
         with self.load_vector_store().acquire() as vs:
-            retriever = get_Retriever("ensemble").from_vectorstore(
+            retriever = get_Retriever(retriever_type).from_vectorstore(
                 vs,
                 top_k=top_k,
                 score_threshold=score_threshold,

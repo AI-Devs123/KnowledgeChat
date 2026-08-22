@@ -73,7 +73,16 @@ async def kb_chat(query: str = Body(..., description="用户输入", examples=["
 
             if mode == "local_kb":
                 kb = KBServiceFactory.get_service_by_name(kb_name)
-                ok, msg = kb.check_embed_model()
+                if kb is None:
+                    raise ValueError(f"知识库 '{kb_name}' 不存在")
+                
+                # 检查嵌入模型
+                check_result = kb.check_embed_model()
+                if not isinstance(check_result, tuple) or len(check_result) != 2:
+                    logger.error(f"check_embed_model returned invalid result: {check_result}")
+                    raise ValueError(f"嵌入模型检查返回了无效结果")
+                
+                ok, msg = check_result
                 if not ok:
                     raise ValueError(msg)
                 docs = await run_in_threadpool(search_docs,

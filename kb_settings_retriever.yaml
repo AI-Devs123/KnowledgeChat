@@ -1,0 +1,32 @@
+# 检索器配置文件
+# 用于评估驱动开发，快速切换不同检索策略
+
+# 默认检索器类型
+# 可选值: 'vectorstore', 'ensemble', 'adaptive', 'hybrid_fusion', 'rerank'
+DEFAULT_RETRIEVER_TYPE: adaptive
+
+# 策略: adaptive
+# 说明: 自适应检索 - 根据查询类型动态选择策略
+# 改进幅度:
+#   Precision: +3.4%
+#   Recall:    +0.0%
+#   F1 Score:  +2.2%
+#   MRR:       +1.4%
+#   响应时间:  +11.0%
+
+# 检索参数
+VECTOR_SEARCH_TOP_K: 5
+SCORE_THRESHOLD: 0.5
+
+# 重排序配置（仅当 DEFAULT_RETRIEVER_TYPE=rerank 时生效）
+USE_RERANKER: false
+RERANK_TOP_K: 20  # 重排序前召回的候选文档数
+RERANKER_MODEL: BAAI/bge-reranker-large
+RERANKER_MAX_LENGTH: 1024
+
+# 混合融合配置（仅当 DEFAULT_RETRIEVER_TYPE=hybrid_fusion 时生效）
+RRF_K: 60  # Reciprocal Rank Fusion 参数
+
+# Ensemble 检索权重（仅当 DEFAULT_RETRIEVER_TYPE=ensemble 时生效）
+BM25_WEIGHT: 0.5
+VECTOR_WEIGHT: 0.5

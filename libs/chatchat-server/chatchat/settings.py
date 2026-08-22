@@ -11,8 +11,28 @@ from chatchat import __version__
 from chatchat.pydantic_settings_file import *
 
 
-# chatchat 数据目录，必须通过环境变量设置。如未设置则自动使用当前目录。
-CHATCHAT_ROOT = Path(os.environ.get("CHATCHAT_ROOT", ".")).resolve()
+# chatchat 数据目录，必须通过环境变量设置。如未设置则自动推导。
+def _get_chatchat_root() -> Path:
+    """
+    获取 CHATCHAT_ROOT 目录
+    优先使用环境变量，如果没有设置，则向上查找包含配置文件的目录
+    """
+    if env_root := os.environ.get("CHATCHAT_ROOT"):
+        return Path(env_root).resolve()
+    
+    # 从当前文件向上查找，直到找到包含 basic_settings.yaml 的目录
+    current = Path(__file__).resolve().parent  # chatchat package 目录
+    
+    # 向上查找最多 5 层
+    for _ in range(5):
+        current = current.parent
+        if (current / "basic_settings.yaml").exists():
+            return current
+    
+    # 如果找不到，使用当前工作目录
+    return Path(".").resolve()
+
+CHATCHAT_ROOT = _get_chatchat_root()
 
 XF_MODELS_TYPES = {
     "text2image": {"model_family": ["stable_diffusion"]},
@@ -467,7 +487,6 @@ class ApiModelSettings(BaseFileSettings):
 class ToolSettings(BaseFileSettings):
     """Agent 工具配置项"""
     model_config = SettingsConfigDict(yaml_file=CHATCHAT_ROOT / "tool_settings.yaml",
-                                      json_file=CHATCHAT_ROOT / "tool_settings.json",
                                       extra="allow")
 
     search_local_knowledgebase: dict = {
@@ -619,7 +638,6 @@ class PromptSettings(BaseFileSettings):
     """Prompt 模板.除 Agent 模板使用 f-string 外，其它均使用 jinja2 格式"""
 
     model_config = SettingsConfigDict(yaml_file=CHATCHAT_ROOT / "prompt_settings.yaml",
-                                      json_file=CHATCHAT_ROOT / "prompt_settings.json",
                                       extra="allow")
 
     preprocess_model: dict = {
